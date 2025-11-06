@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html>
-<body>
+# Use the official NGINX image as the base image
+FROM nginx:latest
 
-<p>I am normal</p>
-<p style="color:red;">I am red</p>
-<p style="color:blue;">I am blue</p>
-<p style="font-size:50px;">I am big</p>
-
-</body>
-</html>
+# Copy your static website content into the NGINX web root directory
+# Replace './static-html-directory' with the path to your content on the host
+COPY ./index.html /usr/share/nginx/html
